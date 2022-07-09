@@ -143,7 +143,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
 EXPOSE 80
 
 # Database default settings
-ENV DB_HOST=database.postgres
+ENV DB_HOST=containers-us-west-76.railway.app
 ENV DB_PORT=5474
 ENV DB_USER=postgres
 ENV DB_PASS=cFZunhP92aBJOmBYUrC6
