@@ -82,10 +82,10 @@ COPY src/s6/ /etc/s6/
 
 # Open up ports to bypass ttrss strict port checks, USE WITH CAUTION
 ENV ALLOW_PORTS="80,443"
-ENV SELF_URL_PATH http://localhost:181
-ENV DB_NAME ttrss
-ENV DB_USER ttrss
-ENV DB_PASS ttrss
+ENV SELF_URL_PATH https://trss.up.railway.app/
+ENV DB_NAME railway
+ENV DB_USER postgres
+ENV DB_PASS cFZunhP92aBJOmBYUrC6
 
 # Install dependencies
 RUN chmod -x /wait-for.sh && chmod -x /docker-entrypoint.sh && apk add --update --no-cache git nginx s6 curl sudo \
@@ -144,10 +144,10 @@ EXPOSE 80
 
 # Database default settings
 ENV DB_HOST=database.postgres
-ENV DB_PORT=5432
+ENV DB_PORT=5474
 ENV DB_USER=postgres
-ENV DB_PASS=ttrss
-ENV DB_NAME=ttrss
+ENV DB_PASS=cFZunhP92aBJOmBYUrC6
+ENV DB_NAME=railway
 
 # Some default settings
 ENV SELF_URL_PATH=http://localhost:181/
